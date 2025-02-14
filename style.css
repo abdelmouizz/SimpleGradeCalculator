@@ -1,0 +1,36 @@
+.container{
+        display: flex;
+        position: relative;
+        max-width:800px;
+        gap: 20px;
+        padding: 10px;
+
+        left:500px ;
+        flex-direction: column;
+        overflow: hidden;
+        background-color: azure;
+        justify-content: start;
+        border : 2px solid rgb(8, 8, 8);
+        border-radius: 10px ;
+}
+label{
+      font-weight: bolder;
+}
+input{
+        width: 150px;
+        background-color: rgb(243, 243, 243);
+        border-radius: 10px;
+   
+        padding: 10px;
+        
+}
+.container > div{
+
+        display: flex;
+        justify-content: start;
+        gap: 20px;
+}
+p{
+        font-size: 50px;
+        font-weight: bolder;
+}
