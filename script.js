@@ -1,3 +1,14 @@
+function updateInputBorders() {
+    let inputs = document.querySelectorAll('input[type="number"]');
+    inputs.forEach(input => {
+        let value = parseFloat(input.value);
+        if (value >= 10) {
+            input.style.borderColor = 'green';
+        } else {
+            input.style.borderColor = 'red';
+        }
+    });
+}
 function calculateResult() {
     let percentage = [0.6 , 0.4];
     let multipliers = [3, 3, 3, 2, 2, 2, 1]; 
@@ -20,8 +31,16 @@ function calculateResult() {
         document.getElementById("result").style.color = "red";
     }
  }
+// Add event listeners to all input fields
+let inputs = document.querySelectorAll('input[type="number"]');
+inputs.forEach(input => {
+    input.addEventListener('input', () => {
+        updateInputBorders();
+    });
+});
 
-/* function calculateResult() {
+/* My Old Code
+ function calculateResult() {
 let num1 = document.getElementById("num1").value;
 let num2 = document.getElementById("num2").value;
 let num3 = document.getElementById("num3").value;
